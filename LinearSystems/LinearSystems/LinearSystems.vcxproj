@@ -138,7 +138,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LinearSystem.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Row.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LinearSystem.h" />
+    <ClInclude Include="Row.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

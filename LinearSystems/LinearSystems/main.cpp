@@ -1,35 +1,28 @@
 #include <iostream>
+#include "Row.h"
+#include "LinearSystem.h"
 
 using namespace std;
 
-struct vector
-{
-	double x;
-	double y;
-	double z;
-	// выводит вектор на экран
-	void print()
-	{
-		cout << "(" << x << "; " << y << "; " << z << ")";
-	}
-};
-
-vector operator+(vector v1, vector v2)
-{
-	vector sum;
-	sum.x = v1.x + v2.x;
-	sum.y = v1.y + v2.y;
-	return sum;
-}
-
 int main()
 {
-	vector v;
-	v.x = 1;
-	v.y = 2;
-	v.z = 3;
-	vector u = v + v;
-	u.print();
+	Row r1, r2;
+	for (int i = 0; i < 4; i++)
+	{
+		r1.data[i] = i * i;
+		r2.data[i] = i + 1;
+	}
+
+	Row r3 = r1 + r2;
+
+	LinearSystem s;
+
+	s.data[0] = r1;
+	s.data[1] = r2;
+	s.data[2] = r3;
 	
+	s.print();
+	s.straightGauss();
+	s.print();
 	return 0;
 }
