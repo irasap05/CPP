@@ -5,6 +5,9 @@ struct Row
 	// здесь хранятся сами данные
 	double data[4];
 
+	// Конструктор
+	Row(double x1 = 0, double x2 = 0, double x3 = 0, double b = 0);
+
 	// выводит строку на консоль
 	void print();
 

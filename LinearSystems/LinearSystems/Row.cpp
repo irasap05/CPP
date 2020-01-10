@@ -3,6 +3,14 @@
 
 using namespace std;
 
+Row::Row(double x1, double x2, double x3, double b)
+{
+	data[0] = x1;
+	data[1] = x2;
+	data[2] = x3;
+	data[3] = b;
+}
+
 // выводит строку на консоль
 void Row::print()
 {
