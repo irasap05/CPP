@@ -36,3 +36,136 @@ void task3()
 		cout << "net";
 	}
 }
+
+void task4()
+{
+	int o = 0;
+	int p = 0;
+	for (int i = 0; i < 7; i++)
+	{
+		int x = (rand() % 201) - 100;
+		cout << x << " ";
+		if (x > 0)
+		{
+			++p;
+		}
+		if (x < 0)
+		{
+			++o;
+		}
+	}
+	cout << endl << p << " " << o;
+}
+
+void task5()
+{
+	int k = 0;
+	int n;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		int x;
+		cin >> x;
+		if (x % 10 == 4 && x % 6 == 0)
+		{
+			++k;
+		}
+	}
+	cout << k;
+}
+
+void task6()
+{
+	int p = 1;
+	int n;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		int x = (rand() % 21) - 10;
+		cout << x << " ";
+		if (x > 0 && x % 2 != 0)
+		{
+			p *= x;
+		}
+	}
+	cout << endl << p;
+}
+
+void task7()
+{
+	int n;
+	cin >> n;
+	double s = 0;
+	for (double i = 1; i <= n; i++)
+	{
+		s += (i + 1) / i;
+	}
+	cout << s;
+}
+
+void task8()
+{
+	int n;
+	cin >> n;
+	double s = 0;
+	int k = 0;
+	for (int i = 0; i < n; i++)
+	{
+		int x;
+		cin >> x;
+		if (x % 10 == 2 && x % 6 == 0)
+		{
+			s += x;
+			++k;
+		}
+	}
+	cout << s / k;
+}
+
+void task9()
+{
+	int a;
+	int m = INT_MAX;
+	for (int i = 0; i < 4; i++)
+	{
+		cin >> a;
+		if (a < m)
+		{
+			m = a;
+		}
+	}
+	cout << m;
+}
+
+void task10()
+{
+	int a;
+	cin >> a;
+	int s = 0;
+	while (a != 0)
+	{
+		s += a % 10;
+		a /= 10;
+	}
+	cout << s;
+}
+
+void task11()
+{
+	int a;
+	int m = INT_MAX;
+	int M = INT_MIN;
+	for (int i = 0; i < 3; i++)
+	{
+		cin >> a;
+		if (a > M)
+		{
+			M = a;
+		}
+		if (a < m)
+		{
+			m = a;
+		}
+	}
+	cout << m + M;
+}
