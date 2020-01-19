@@ -169,3 +169,26 @@ void task11()
 	}
 	cout << m + M;
 }
+
+void task12()
+{
+	int const n = 10;
+	int x[n];
+	int y[n];
+	int i;
+	int m = 0;
+	for (int i = 0; i < n; i++)
+	{
+		y[i] = 0;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		cin >> x[i];
+		if (x[i] < 0)
+		{
+			++m;
+			y[m] = x[i];
+			cout << y[m] << " ";
+		}
+	}
+}
