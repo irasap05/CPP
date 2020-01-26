@@ -192,3 +192,87 @@ void task12()
 		}
 	}
 }
+
+void task13()
+{
+	srand(time(0));
+	int const n = 18;
+	int a[n];
+	int k = 0;
+	for (int i = 0; i < n; i++)
+	{
+		a[i] = (rand() % 12) - 6;
+		cout << a[i] << " ";
+		if ((a[i] % 9) == 0)
+		{
+			++k;
+		}
+	}
+	cout << k;
+}
+
+void task14()
+{
+	srand(time(0));
+	int const n = 15;
+	int a[n];
+	int s = 0;
+	for (int i = 0; i < n; i++)
+	{
+		a[i] = (rand() % 22) - 11;
+		cout << a[i] << " ";
+		if (a[i] % 10 == 3)
+		{
+			s += a[i];
+		}
+	}
+	cout << s;
+}
+
+void task15()
+{
+	int const n = 10;
+	int a[n];
+	for (int i = 0; i < n; i++)
+	{
+		cin >> a[i];
+		if (a[i] % 5 == 0 && i % 2 == 1)
+		{
+			cout << a[i];
+		}
+	}
+}
+
+void task16()
+{
+	srand(time(0));
+	int const n = 15;
+	int a[n];
+	for (int i = 0; i < n; i++)
+	{
+
+	}
+}
+
+void olympic13_7()
+{
+	for (int a = 1; a < 10; ++a)
+	{
+		for (int b = 0; b < 10; ++b)
+		{
+			for (int c = 0; c < 10; ++c)
+			{
+				for (int d = 0; d < 10; ++d)
+				{
+					int x = 1000 * a + 100 * b + 10 * c + d;
+					int y = a + b * b + c * c * c + d * d * d * d;
+					y *= y;
+					if (x == y)
+					{
+						cout << x << " ";
+					}
+				}
+			}
+		}
+	}
+}
