@@ -248,10 +248,17 @@ void task16()
 	srand(time(0));
 	int const n = 15;
 	int a[n];
+	int s = 0;
 	for (int i = 0; i < n; i++)
 	{
-
+		a[i] = (rand() % 22) - 11;
+		cout << a[i] << " ";
+		if (a[i] % 2 == 0 && a[i] < 0)
+		{
+			s += a[i];
+		}
 	}
+	cout << s;
 }
 
 void olympic13_7()
