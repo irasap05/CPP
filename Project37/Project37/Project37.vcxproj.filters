@@ -13,10 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\matrix">
+      <UniqueIdentifier>{e45d3fe2-2429-4430-94e0-895b8429b256}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\matrix">
+      <UniqueIdentifier>{d3d5d834-0c12-49ae-be98-caa6306092dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\pointer">
+      <UniqueIdentifier>{9e55496b-1047-4716-8edb-b4366df1e370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\recursion">
+      <UniqueIdentifier>{46a0e6c6-9edc-4386-a588-0f1e50687b31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="matrix.cpp">
+      <Filter>Source Files\matrix</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="matrix.h">
+      <Filter>Header Files\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="pointer.h">
+      <Filter>Header Files\pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="factorial.h">
+      <Filter>Header Files\recursion</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
