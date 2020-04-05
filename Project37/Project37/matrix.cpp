@@ -1,10 +1,10 @@
-#include "matrix.h"
+#include "Matrix.h"
 #include <iostream>
 
 using namespace std;
 
 //contructors
-matrix::matrix(int size)
+Matrix::Matrix(int size)
 {
 	this->size = size;
 	data = new double* [size];
@@ -14,7 +14,7 @@ matrix::matrix(int size)
 	}
 }
 
-matrix& matrix::operator=(matrix const& m)
+Matrix& Matrix::operator=(Matrix const& m)
 {
 	this->size = m.size;
 	for (int i = 0; i < size; ++i)
@@ -28,7 +28,7 @@ matrix& matrix::operator=(matrix const& m)
 }
 
 // input
-void matrix::inFromKeyBoard()
+void Matrix::inFromKeyBoard()
 {
 	for (int i = 0; i < size; ++i)
 	{
@@ -40,7 +40,7 @@ void matrix::inFromKeyBoard()
 }
 
 // output to console
-void matrix::print()
+void Matrix::print()
 {
 	for (int i = 0; i < size; ++i)
 	{
@@ -55,12 +55,23 @@ void matrix::print()
 // others
 
 // определитель матрицы
-double matrix::det()
+double Matrix::det()
 {
-	return 0;
+	if (size == 2)
+	{
+		return data[0][0] * data[1][1] - data[0][1] * data[1][0];
+	}
+	double r = 0;
+	double sign = 1;
+	for (int i = 0; i < size; ++i)
+	{
+		r += sign * data[0][i] * alg(0, i).det();
+		sign *= -1;
+	}
+	return r;
 }
 
-void matrix::swap(double& x, double& y)
+void Matrix::swap(double& x, double& y)
 {
 	double temp = x;
 	x = y;
@@ -68,7 +79,7 @@ void matrix::swap(double& x, double& y)
 }
 
 // swap rows
-void matrix::swapRows(int const i, int const j)
+void Matrix::swapRows(int const i, int const j)
 {
 	for (int k = 0; k < size; ++k)
 	{
@@ -77,7 +88,7 @@ void matrix::swapRows(int const i, int const j)
 }
 
 // row down
-void matrix::rowDown(int const i)
+void Matrix::rowDown(int const i)
 {
 	for (int k = i + 1; k < size; ++k)
 	{
@@ -86,7 +97,7 @@ void matrix::rowDown(int const i)
 }
 
 // swap cols
-void matrix::swapCols(int const i, int const j)
+void Matrix::swapCols(int const i, int const j)
 {
 	for (int k = 0; k < size; ++k)
 	{
@@ -95,7 +106,7 @@ void matrix::swapCols(int const i, int const j)
 }
 
 // col right
-void matrix::colRight(int const i)
+void Matrix::colRight(int const i)
 {
 	for (int k = i + 1; k < size; ++k)
 	{
@@ -104,10 +115,10 @@ void matrix::colRight(int const i)
 }
 
 // алгебраическое дополнение
-matrix matrix::alg(int i, int j)
+Matrix Matrix::alg(int i, int j)
 {
-	matrix result(size - 1);
-	matrix m(size);
+	Matrix result(size - 1);
+	Matrix m(size);
 	m = *this;
 	m.rowDown(i);
 	m.colRight(j);

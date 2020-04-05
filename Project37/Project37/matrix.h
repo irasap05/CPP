@@ -1,6 +1,6 @@
 #pragma once
 
-class matrix
+class Matrix
 {
 public:
 	// fields
@@ -8,8 +8,8 @@ public:
 	int size;
 
 	// constructors
-	matrix(int const size);
-	matrix& operator=(matrix const& m);
+	Matrix(int const size);
+	Matrix& operator=(Matrix const& m);
 
 	// input
 	void inFromKeyBoard();
@@ -32,7 +32,7 @@ public:
 	void colRight(int const i);
 
 	// алгебраическое дополнение
-	matrix alg(int i, int j);
+	Matrix alg(int i, int j);
 
 	// определитель матрицы
 	double det();

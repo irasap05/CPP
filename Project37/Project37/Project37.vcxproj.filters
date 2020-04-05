@@ -25,6 +25,12 @@
     <Filter Include="Header Files\recursion">
       <UniqueIdentifier>{46a0e6c6-9edc-4386-a588-0f1e50687b31}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\linearSystem">
+      <UniqueIdentifier>{d6585978-6ec3-4afe-b705-ddd707a07400}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\linearSystem">
+      <UniqueIdentifier>{8debfd0f-00d4-4a90-b840-ac92bb406720}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -32,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="matrix.cpp">
       <Filter>Source Files\matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="linearSystem.cpp">
+      <Filter>Source Files\linearSystem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -43,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="factorial.h">
       <Filter>Header Files\recursion</Filter>
+    </ClInclude>
+    <ClInclude Include="linearSystem.h">
+      <Filter>Header Files\linearSystem</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
