@@ -1,14 +1,23 @@
 #include <iostream>
-#include "matrix.h"
-#include "linearSystem.h"
+#include "Node.h"
 
 using namespace std;
 
 int main()
 {
-	LinearSystem l(4);
-	l.inFromKeyBoard();
-	l.kramer();
-	l.answer.print();
+	Node* head = new Node;
+	Node* temp = head;
+	for (int i = 1; i <= 10; ++i)
+	{
+		temp->data = i;
+		temp->next = new Node;
+		temp = temp->next;
+	}
+	temp = head;
+	for (int i = 1; i <= 10; ++i)
+	{
+		cout << temp->data;
+		temp = temp->next;
+	}
 	return 0;
 }

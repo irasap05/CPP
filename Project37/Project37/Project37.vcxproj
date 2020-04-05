@@ -139,12 +139,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="linearSystem.cpp" />
+    <ClCompile Include="list.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="matrix.cpp" />
+    <ClCompile Include="Node.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="linearSystem.h" />
+    <ClInclude Include="list.h" />
     <ClInclude Include="matrix.h" />
+    <ClInclude Include="Node.h" />
     <ClInclude Include="pointer.h" />
     <ClInclude Include="factorial.h" />
   </ItemGroup>

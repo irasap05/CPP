@@ -31,6 +31,12 @@
     <Filter Include="Source Files\linearSystem">
       <UniqueIdentifier>{8debfd0f-00d4-4a90-b840-ac92bb406720}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\list">
+      <UniqueIdentifier>{74236567-d040-421c-80bb-4b0eb416e40d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\list">
+      <UniqueIdentifier>{a1030fd6-be26-4c2f-b88c-d569fd692629}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -41,6 +47,12 @@
     </ClCompile>
     <ClCompile Include="linearSystem.cpp">
       <Filter>Source Files\linearSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="list.cpp">
+      <Filter>Source Files\list</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Source Files\list</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +67,12 @@
     </ClInclude>
     <ClInclude Include="linearSystem.h">
       <Filter>Header Files\linearSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="list.h">
+      <Filter>Header Files\list</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Header Files\list</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
