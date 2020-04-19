@@ -1,23 +1,17 @@
 #include <iostream>
-#include "Node.h"
+#include "list.h"
 
 using namespace std;
 
 int main()
 {
-	Node* head = new Node;
-	Node* temp = head;
+	List l;
 	for (int i = 1; i <= 10; ++i)
 	{
-		temp->data = i;
-		temp->next = new Node;
-		temp = temp->next;
+		l.add(i);
 	}
-	temp = head;
-	for (int i = 1; i <= 10; ++i)
-	{
-		cout << temp->data;
-		temp = temp->next;
-	}
+	l.print();
+	l.cycleShiftRight();
+	l.print();
 	return 0;
 }
