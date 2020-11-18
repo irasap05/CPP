@@ -1,19 +1,19 @@
 #include <iostream>
 #include "Row.h"
 #include "LinearSystem.h"
+#include "Matrix.h"
 
 using namespace std;
 
 int main()
 {
-	Row r1(2, 10, -3, 38);
-	Row r2(-3, -24, 5, -86);
-	Row r3(1, 3, -5, 27);
-	LinearSystem s(r1, r2, r3);
-	s.print();
-	s.StraightGauss();
-	s.print();
-	s.ReverseGauss();
-	s.print();
+	Matrix m(3);
+
+	m.fromKeyboard();
+	
+	Vector v(3);
+	v.fromKeyboard();
+	m.swapColumn(1, v).print();
+	m.print();
 	return 0;
 }
