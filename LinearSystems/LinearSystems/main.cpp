@@ -1,8 +1,9 @@
 #include <iostream>
+#include "Matrix.h"
 
 using namespace std;
 
-int main()
+void memory()
 {
 	int** a = new int* [10000];
 	for (int i = 0; i < 10000; ++i)
@@ -36,6 +37,10 @@ int main()
 		delete[] a[i];
 	}
 	delete[] a;
+}
+
+int main()
+{
 
 	return 0;
 }
