@@ -17,7 +17,7 @@ struct Vector
 
 	~Vector()
 	{
-		delete[] data;
+		/*delete[] data;*/
 	}
 
 	void print()
@@ -58,12 +58,12 @@ struct Matrix
 
 	~Matrix()
 	{
-		for (int i = 0; i < size; ++i)
+		/*for (int i = 0; i < size; ++i)
 		{
 			delete[] data[i];
 		}
 
-		delete[] data;
+		delete[] data;*/
 	}
 
 	void print()
@@ -179,7 +179,7 @@ struct Matrix
 
 		for (int column = 0; column < size; ++column)
 		{
-			sum += data[0][column] * alg(0, column).det();
+			sum += sign * data[0][column] * alg(0, column).det();
 			sign *= -1;
 		}
 

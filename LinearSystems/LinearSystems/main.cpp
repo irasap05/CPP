@@ -39,8 +39,38 @@ void memory()
 	delete[] a;
 }
 
+int LS()
+{
+	int amountOfVariables = 0;
+	cout << "input amount of variables: ";
+	cin >> amountOfVariables;
+
+	Matrix coefficientMatrix(amountOfVariables);
+	cout << "input coefficient matrix:" << endl;
+	coefficientMatrix.inputFromKeyboard();
+
+	Vector freeTerms(amountOfVariables);
+	cout << "input free terms vector:" << endl;
+	freeTerms.inputFromKeyboard();
+
+	double determinant = coefficientMatrix.det();
+	if (determinant == 0)
+	{
+		cout << "I can't solve";
+		return 0;
+	}
+
+	for (int i = 0; i < amountOfVariables; ++i)
+	{
+		cout << "x" << i << " = " << coefficientMatrix.swapColumnToVector(i, freeTerms).det() / determinant << "; ";
+	}
+
+	return 0;
+}
+
 int main()
 {
+	LS();
 
 	return 0;
 }
