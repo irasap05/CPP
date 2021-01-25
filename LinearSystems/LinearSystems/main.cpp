@@ -70,7 +70,11 @@ int LS()
 
 int main()
 {
-	LS();
+	Matrix m(2);
+	Matrix n(2);
+	n.inputFromKeyboard();
+	m = n;
+	n.print();
 
 	return 0;
 }

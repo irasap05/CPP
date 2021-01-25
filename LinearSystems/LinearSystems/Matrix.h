@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+#include <cassert>
+
 using namespace std;
 
 struct Vector
@@ -66,6 +68,21 @@ struct Matrix
 		delete[] data;*/
 	}
 
+	Matrix& operator=(Matrix const& matrix)
+	{
+		assert(this->size == matrix.size);
+
+		for (int i = 0; i < matrix.size; ++i)
+		{
+			for (int j = 0; j < matrix.size; ++j)
+			{
+				this->data[i][j] = matrix.data[i][j];
+			}
+		}
+
+		return *this;
+	}
+
 	void print()
 	{
 		for (int i = 0; i < size; ++i)
@@ -112,13 +129,7 @@ struct Matrix
 	Matrix alg(int const row, int const column) const
 	{
 		Matrix temp(size);
-		for (int i = 0; i < size; ++i)
-		{
-			for (int j = 0; j < size; ++j)
-			{
-				temp.data[i][j] = this->data[i][j];
-			}
-		}
+		temp = *this;
 
 		for (int i = row + 1; i < size; ++i)
 		{
@@ -146,13 +157,7 @@ struct Matrix
 	Matrix swapColumnToVector(int const column, Vector const vector) const
 	{
 		Matrix temp(size);
-		for (int i = 0; i < size; ++i)
-		{
-			for (int j = 0; j < size; ++j)
-			{
-				temp.data[i][j] = this->data[i][j];
-			}
-		}
+		temp = *this;
 
 		for (int i = 0; i < size; ++i)
 		{
