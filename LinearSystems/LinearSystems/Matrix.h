@@ -58,14 +58,34 @@ struct Matrix
 		this->size = size;
 	}
 
+	Matrix(Matrix const& matrix)
+	{
+		this->data = new double*[matrix.size];
+
+		for (int row = 0; row < matrix.size; ++row)
+		{
+			this->data[row] = new double[matrix.size];
+		}
+
+		this->size = matrix.size;
+
+		for (int i = 0; i < matrix.size; ++i)
+		{
+			for (int j = 0; j < matrix.size; ++j)
+			{
+				this->data[i][j] = matrix.data[i][j];
+			}
+		}
+	}
+
 	~Matrix()
 	{
-		/*for (int i = 0; i < size; ++i)
+		for (int i = 0; i < size; ++i)
 		{
 			delete[] data[i];
 		}
 
-		delete[] data;*/
+		delete[] data;
 	}
 
 	Matrix& operator=(Matrix const& matrix)
